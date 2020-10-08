@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+    <html>
+        <head>
+            <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+            <script type="text/javascript" src="functions.js"></script>
+            <link rel="stylesheet" href="styles.css">
+        </head>
+        <body>
+        <div id = "myDiv">
+            <h1>Word Guess</h1>
+            <input type="button" id = "play-button" value="Play Game" onclick="playGame()">
+            <br><br>
+            <h3 class = "gameplay" id = "welcome"></h3>
+            <br><br>
+            <input class = "afterGameplay" type="button" value="Play Again with SAME user?" onclick="playGame()">
+            <br><br>
+            <input class = "afterGameplay" type="button" value="Play Again with DIFFERENT user?" onclick="differentUser()">
+            <br><br>
+            <p class = "gameplay" id = "displayTitleName"></p>
+            <p class = "gameplay" id = "titleNote">NOTE: Spaces have been removed from the song title</p>
+            <br><br>
+            <fieldset style="width:0px" class = "gameplay">
+                <legend><strong><em>Available Characters:</em></strong></legend>
+                <p class = "gameplay" id = "availableLetters"></p>
+            </fieldset>
+            <br><br>
+            <fieldset style="width:0px" class = "gameplay">
+                <legend><strong><em>Used Characters:</em></strong></legend>
+                <p class = "gameplay" id = "usedLetters"></p>
+            </fieldset>
+            <br><br>
+            <fieldset style="width:0px" class = "gameplay">
+                <label>Enter Character:</label>
+                <input id = "inputLetter" type="text" class = "gameplay">
+                <br><br>
+                <input class = "gameplay" type="button" id = "submitCharacter" value="Submit Character" onclick="submitCharacter()">
+                <br><br>
+                <p><strong>OR</strong></p>
+                <br><br>
+                <label>Enter Your Final Guess:</label>
+                <input id="finalGuess" class = "gameplay" type="text">
+                <em>NOTE:But if you guess wrong, 26 will be added to your guess count</em>
+                <br><br>
+                <input class = "gameplay" type="button" value="Final Guess" onclick="checkWin()">
+                <br><br>
+            </fieldset>
+            <br><br>
+            <input class = "afterGameplay" type="button" value="Show Games" onclick="showGames()">
+            <br><br>
+            <input class = "afterGameplay" type="button" value="Reset Form" onclick="resetMe()">
+            <h3 class = "afterGameplay" id="showGames"> </h3>
+        </div>
+        </body>
+    </html>
